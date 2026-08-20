@@ -57,5 +57,40 @@ function change(id,d){const item=cart.find(x=>x.id===id);if(!item)return;item.qt
 function renderCart(){document.querySelector('#cartCount').textContent=cart.reduce((s,x)=>s+x.qty,0);document.querySelector('#cartItems').innerHTML=cart.length?cart.map(x=>`<div class="drawer-item"><div><strong>${x.name}</strong><div>${money(x.price)} × ${x.qty}</div></div><div class="qty"><button data-dec="${x.id}">−</button><b>${x.qty}</b><button data-inc="${x.id}">+</button></div></div>`).join(''):'<p>Your cart is empty. Add products from the shop.</p>';const total=cart.reduce((s,x)=>s+x.price*x.qty,0);document.querySelector('#cartTotal').textContent=money(total);document.querySelectorAll('[data-dec]').forEach(b=>b.onclick=()=>change(+b.dataset.dec,-1));document.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>change(+b.dataset.inc,1))}
 function openCart(){document.querySelector('#cart').classList.add('open');document.querySelector('#overlay').classList.add('show');document.querySelector('#cart').setAttribute('aria-hidden','false')};function closeCart(){document.querySelector('#cart').classList.remove('open');document.querySelector('#overlay').classList.remove('show');document.querySelector('#cart').setAttribute('aria-hidden','true')}
 document.querySelector('#cartOpen').onclick=openCart;document.querySelector('#cartClose').onclick=closeCart;document.querySelector('#overlay').onclick=closeCart;document.querySelector('#search').oninput=renderProducts;document.querySelector('#sort').onchange=renderProducts;
-document.querySelector('#order').onclick=()=>{if(!cart.length)return alert('Your cart is empty.');const lines=cart.map(x=>`${x.name} x${x.qty} = ${money(x.price*x.qty)}`).join('%0A');const total=cart.reduce((s,x)=>s+x.price*x.qty,0);location.href=`https://wa.me/254107862702?text=Hello%20Viman%20Distributors,%20I%20would%20like%20to%20order:%0A%0A${lines}%0A%0ASubtotal:%20${money(total)}%0A%0APlease%20confirm%20availability%20and%20delivery.`};
-renderCategories();renderProducts();renderCart();
+document.querySelector('#order').onclick=()=>{
+  if(!cart.length)return alert('Your cart is empty.');
+
+  const name=prompt('Enter your full name:');
+  if(!name||!name.trim())return;
+
+  const phone=prompt('Enter your phone number:');
+  if(!phone||!phone.trim())return;
+
+  const location=prompt('Enter your delivery location:');
+  if(!location||!location.trim())return;
+
+  const notes=prompt('Any delivery notes? (Optional)')||'None';
+
+  const lines=cart
+    .map(x=>`${x.name} x${x.qty} = ${money(x.price*x.qty)}`)
+    .join('%0A');
+
+  const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
+
+  const message=
+    `Hello Viman Distributors,%0A%0A`+
+    `*NEW ORDER*%0A%0A`+
+    `Customer: ${encodeURIComponent(name.trim())}%0A`+
+    `Phone: ${encodeURIComponent(phone.trim())}%0A`+
+    `Delivery Location: ${encodeURIComponent(location.trim())}%0A`+
+    `Notes: ${encodeURIComponent(notes.trim())}%0A%0A`+
+    `*ORDER ITEMS*%0A${lines}%0A%0A`+
+    `*TOTAL: ${money(total)}*%0A%0A`+
+    `Please confirm availability and delivery.`;
+
+  location.href=`https://wa.me/254107862702?text=${message}`;
+};
+
+renderCategories();
+renderProducts();
+renderCart();
