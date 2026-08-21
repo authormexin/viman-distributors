@@ -1,74 +1,14 @@
-/* SAMWEST WHOLESALE DISTRIBUTORS KENYA catalogue */
-const samwestProducts = [
-{id:101,name:'Eggs Tray',cat:'Dairy',price:350,img:'https://vimandistributors.store/images/WhatsApp-Image-2025-11-20-at-6.58.00-PM-2-1.jpeg'},
-{id:102,name:'20 Litres SALIT/BAHARI/POSTMAN/PIKA Cooking Oil',cat:'Cooking',price:3200,img:'https://vimandistributors.store/images/download-66.jpg.jpeg'},
-{id:103,name:'10 Litres SALIT/BAHARI/POSTMAN/PIKA Cooking Oil',cat:'Cooking',price:1600,img:'https://vimandistributors.store/images/1q.jpg.jpeg'},
-{id:104,name:'20 Litres RINSUN Vegetable Oil',cat:'Cooking',price:3400,img:'https://vimandistributors.store/images/download-67.jpg.jpeg'},
-{id:105,name:'SOMO Solid Cooking Fat 10Kg Carton',cat:'Cooking',price:1650,img:'https://vimandistributors.store/images/download-69.jpg.jpeg'},
-{id:106,name:'FRYMATE 10kg Carton',cat:'Cooking',price:1350,img:'https://vimandistributors.store/images/download-71-166x300.jpg.jpeg'},
-{id:107,name:'25kg BIRIYANI Rice',cat:'Staples',price:1950,img:'https://vimandistributors.store/images/download-7.jpg.jpeg'},
-{id:108,name:'25kg BASMATI Rice',cat:'Staples',price:2400,img:'https://vimandistributors.store/images/download-76.jpg.jpeg'},
-{id:109,name:'25kg PISHORI Rice',cat:'Staples',price:3200,img:'https://vimandistributors.store/images/download-76.jpg.jpeg'},
-{id:110,name:'25kg SINDANO Rice',cat:'Staples',price:1800,img:'https://vimandistributors.store/images/download-7.jpg.jpeg'},
-{id:111,name:'50kg SUGAR (Brown)',cat:'Staples',price:5450,img:'https://vimandistributors.store/images/download-76.jpg.jpeg'},
-{id:112,name:'50kg SUGAR (White)',cat:'Staples',price:5600,img:'https://vimandistributors.store/images/download-2-1.jpg.jpeg'},
-{id:113,name:'WHEAT FLOUR 2kg Bale (Ajab, Pembe, Dola, Ndovu, Soko)',cat:'Staples',price:1800,img:'https://vimandistributors.store/images/images-3-300x150.jpg.jpeg'},
-{id:114,name:'WHEAT FLOUR 1kg Bale (Ajab, Pembe, Dola, Ndovu, Soko)',cat:'Staples',price:1750,img:'https://vimandistributors.store/images/download-13g.jpg.jpeg'},
-{id:115,name:'MAIZE FLOUR 2Kg Bale (Pembe, Dola, Ndovu, Soko)',cat:'Staples',price:1600,img:'https://vimandistributors.store/images/woocommerce-placeholder.webp'},
-{id:116,name:'MAIZE FLOUR 1kg Bale (Pembe, Dola, Ndovu, Soko)',cat:'Staples',price:1550,img:'https://vimandistributors.store/images/m1-300x150.jpg.jpeg'},
-{id:117,name:'REDBULL (24 packs)',cat:'Beverages',price:2400,img:'https://vimandistributors.store/images/download-39.jpg.jpeg'},
-{id:118,name:'PREDATOR Energy Drink 500ml (12 pcs)',cat:'Beverages',price:550,img:'https://vimandistributors.store/images/download-42.jpg.jpeg'},
-{id:119,name:'POWERPLAY Energy Drink 500ml (12pcs)',cat:'Beverages',price:500,img:'https://vimandistributors.store/images/download-3y.jpg.jpeg'},
-{id:120,name:'25kg MILK POWDER',cat:'Dairy',price:7800,img:'https://vimandistributors.store/images/download-56.jpg.jpeg'},
-{id:121,name:'MENENGAI Bar soap 1Kg (A Carton of 25 pcs)',cat:'Cleaning',price:3000,img:'https://vimandistributors.store/images/download-23.jpg.jpeg'},
-{id:122,name:'MSAFI Bar soap 1Kg (10pcs)',cat:'Cleaning',price:1250,img:'https://vimandistributors.store/images/download-25.jpg.jpeg'},
-{id:123,name:'BIDCO Cream Bar Soap 800g (25 pieces)',cat:'Cleaning',price:2300,img:'https://vimandistributors.store/images/download-25.jpg.jpeg'},
-{id:124,name:'Lato UHT Whole Milk 500ml (Box of 12 pieces)',cat:'Dairy',price:520,img:'https://vimandistributors.store/images/download-38.jpg.jpeg'},
-{id:125,name:'Lato PureGEE 1kg (A carton of 12 pieces)',cat:'Dairy',price:4580,img:'https://vimandistributors.store/images/download-38.jpg.jpeg'},
-{id:126,name:'Lato BUTTER 500g (A carton of 12 pieces)',cat:'Dairy',price:5880,img:'https://vimandistributors.store/images/download-38.jpg.jpeg'},
-{id:127,name:'CHEESE 250g (Box of 12pcs)',cat:'Dairy',price:3600,img:'https://vimandistributors.store/images/download-40.jpg.jpeg'},
-{id:128,name:'DAAWAT Spaghetti 400g (A carton of 24 Pieces)',cat:'Staples',price:1150,img:'https://vimandistributors.store/images/21784_main.avif'},
-{id:129,name:'Bella/Hanan Tissue (Bale of 48 pieces)',cat:'Cleaning and Hygiene',price:1020,img:'https://vimandistributors.store/images/download-11-1.jpg.jpeg'},
-{id:130,name:'Weetabix 45grams (A carton of 24 Pieces)',cat:'Staples',price:1370,img:'https://vimandistributors.store/images/download-1.jpg.jpeg'},
-{id:131,name:'INDOMIE 70g (A Carton of 24 Pieces)',cat:'Staples',price:850,img:'https://vimandistributors.store/images/greenspoon_indomie_70g-2076-100x100.jpg.jpeg'},
-{id:132,name:'Sunlight Washing Powder 500g (24 Pieces)',cat:'Cleaning and Hygiene',price:2800,img:'https://vimandistributors.store/images/woocommerce-placeholder.webp'},
-{id:133,name:'Softcare Pampers (Bale of 6 Packets)',cat:'Health & Beauty',price:3000,img:'https://vimandistributors.store/images/download-4.jpg.jpeg'},
-{id:134,name:'Kisskids (Bale of 6 Packets)',cat:'Health & Beauty',price:2400,img:'https://vimandistributors.store/images/download-5.jpg.jpeg'},
-{id:135,name:'Molfix (Bale of 6 Packets)',cat:'Health & Beauty',price:2770,img:'https://vimandistributors.store/images/download-4.jpg.jpeg'},
-{id:136,name:'Maize 90kg',cat:'Cereals',price:3000,img:'https://vimandistributors.store/images/download-55.jpg.jpeg'},
-{id:137,name:'Makueni Ndengu 90kg',cat:'Cereals',price:8300,img:'https://vimandistributors.store/images/download-52.jpg.jpeg'},
-{id:138,name:'Nylon Ndengu 90Kgs',cat:'Cereals',price:7600,img:'https://vimandistributors.store/images/download-54.jpg.jpeg'},
-{id:139,name:'Kamande 50kg',cat:'Cereals',price:7000,img:'https://vimandistributors.store/images/download-53.jpg.jpeg'},
-{id:140,name:'Livelle Toilet Tissue 10×4s',cat:'Cleaning and Hygiene',price:1500,img:'https://vimandistributors.store/images/download-11-1.jpg.jpeg'},
-{id:141,name:'Poshy Roll Xtra Toilet Tissue Unwrapped 4×10s',cat:'Cleaning and Hygiene',price:1000,img:'https://vimandistributors.store/images/download-11-1.jpg.jpeg'},
-{id:142,name:'Poshy Mega Tissue Jumbo Roll Wrapped 12×1s',cat:'Cleaning and Hygiene',price:2100,img:'https://vimandistributors.store/images/download-11-1.jpg.jpeg'},
-{id:143,name:'Celine Premium Serviettes 12×100 Sheets',cat:'Cleaning and Hygiene',price:900,img:'https://vimandistributors.store/images/download-11-1.jpg.jpeg'},
-{id:144,name:'Nuru Scouring Powder Lemon Fresh Bottle 24×500g',cat:'Cleaning and Hygiene',price:1200,img:'https://vimandistributors.store/images/download-30.jpg.jpeg'},
-{id:145,name:'Msafi White Bar Soap 12×700g',cat:'Cleaning and Hygiene',price:1500,img:'https://vimandistributors.store/images/download-25.jpg.jpeg'},
-{id:146,name:'Nuru Dish Washing Paste Lemon Spark 6×800g',cat:'Cleaning and Hygiene',price:1500,img:'https://vimandistributors.store/images/download-31.jpg.jpeg'},
-{id:147,name:'Velvex Dishwashing Liquid Lemon Burst 1×5L',cat:'Cleaning and Hygiene',price:450,img:'https://vimandistributors.store/images/download-30.jpg.jpeg'},
-{id:148,name:'Sunlight Hand Washing Powder Eden Yellow 6×1kg',cat:'Cleaning and Hygiene',price:2000,img:'https://vimandistributors.store/images/woocommerce-placeholder.webp'},
-{id:149,name:'Vim POWDER Lemon Fresh 6×1kg',cat:'Cleaning and Hygiene',price:1000,img:'https://vimandistributors.store/images/woocommerce-placeholder.webp'},
-{id:150,name:'Jik Bleach Regular 4×1.5L',cat:'Cleaning and Hygiene',price:2860,img:'https://vimandistributors.store/images/download-30.jpg.jpeg'},
-{id:151,name:'Jik Bleach Colours 4×1.5L',cat:'Cleaning and Hygiene',price:4300,img:'https://vimandistributors.store/images/download-30.jpg.jpeg'},
-{id:152,name:'Nuru Dish Washing Liquid Lemon Spark 4×5L',cat:'Cleaning and Hygiene',price:2350,img:'https://vimandistributors.store/images/download-31.jpg.jpeg'},
-{id:153,name:'Makueni Ndengu — Price per KG',cat:'Prices per KG',price:95,img:'https://vimandistributors.store/images/download-52.jpg.jpeg'},
-{id:154,name:'Nylon Ndengu — Price per KG',cat:'Prices per KG',price:85,img:'https://vimandistributors.store/images/download-54.jpg.jpeg'},
-{id:155,name:'Kamande — Price per KG',cat:'Prices per KG',price:145,img:'https://vimandistributors.store/images/download-53.jpg.jpeg'},
-{id:156,name:'Maize — Price per KG',cat:'Prices per KG',price:30,img:'https://vimandistributors.store/images/download-55.jpg.jpeg'},
-{id:157,name:'Njahi — Price per KG',cat:'Prices per KG',price:65,img:'https://vimandistributors.store/images/download-52.jpg.jpeg'},
-{id:158,name:'Yellow Beans — Price per KG',cat:'Prices per KG',price:85,img:'https://vimandistributors.store/images/download-52.jpg.jpeg'},
-{id:159,name:'Wairimu Beans — Price per KG',cat:'Prices per KG',price:65,img:'https://vimandistributors.store/images/download-52.jpg.jpeg'},
-{id:160,name:'Nyayo Beans — Price per KG',cat:'Prices per KG',price:65,img:'https://vimandistributors.store/images/download-52.jpg.jpeg'},
-{id:161,name:'Rosecoco — Price per KG',cat:'Prices per KG',price:70,img:'https://vimandistributors.store/images/download-52.jpg.jpeg'},
-{id:162,name:'Pigeon Peas/Bhaazi — Price per KG',cat:'Prices per KG',price:75,img:'https://vimandistributors.store/images/download-52.jpg.jpeg'}
+/* Complete SAMWEST WHOLESALE DISTRIBUTORS KENYA catalogue */
+const samwestProducts=[
+[101,'Eggs Tray','Dairy',350,'WhatsApp-Image-2025-11-20-at-6.58.00-PM-2-1.jpeg'],[102,'20 Litres SALIT/BAHARI/POSTMAN/PIKA Cooking Oil','Cooking',3200,'download-66.jpg.jpeg'],[103,'10 Litres SALIT/BAHARI/POSTMAN/PIKA Cooking Oil','Cooking',1600,'1q.jpg.jpeg'],[104,'20 Litres RINSUN Vegetable Oil','Cooking',3400,'download-67.jpg.jpeg'],[105,'SOMO Solid Cooking Fat 10Kg Carton','Cooking',1650,'download-69.jpg.jpeg'],[106,'FRYMATE 10kg Carton','Cooking',1350,'download-71-166x300.jpg.jpeg'],[107,'25kg BIRIYANI Rice','Staples',1950,'download-7.jpg.jpeg'],[108,'25kg BASMATI Rice','Staples',2400,'download-76.jpg.jpeg'],[109,'25kg PISHORI Rice','Staples',3200,'download-76.jpg.jpeg'],[110,'25kg SINDANO Rice','Staples',1800,'download-7.jpg.jpeg'],[111,'50kg SUGAR (Brown)','Staples',5450,'download-76.jpg.jpeg'],[112,'50kg SUGAR (White)','Staples',5600,'download-2-1.jpg.jpeg'],[113,'WHEAT FLOUR 2kg Bale (Ajab, Pembe, Dola, Ndovu, Soko)','Staples',1800,'images-3-300x150.jpg.jpeg'],[114,'WHEAT FLOUR 1kg Bale (Ajab, Pembe, Dola, Ndovu, Soko)','Staples',1750,'download-13g.jpg.jpeg'],[115,'MAIZE FLOUR 2Kg Bale (Pembe, Dola, Ndovu, Soko)','Staples',1600,'woocommerce-placeholder.webp'],[116,'MAIZE FLOUR 1kg Bale (Pembe, Dola, Ndovu, Soko)','Staples',1550,'m1-300x150.jpg.jpeg'],
+[117,'REDBULL (24 packs)','Beverages',2400,'download-39.jpg.jpeg'],[118,'PREDATOR Energy Drink 500ml (12 pcs)','Beverages',550,'download-42.jpg.jpeg'],[119,'POWERPLAY Energy Drink 500ml (12pcs)','Beverages',500,'download-3y.jpg.jpeg'],[120,'25kg MILK POWDER','Dairy',7800,'download-56.jpg.jpeg'],[121,'MENENGAI Bar soap 1Kg (A Carton of 25 pcs)','Cleaning',3000,'download-23.jpg.jpeg'],[122,'MSAFI Bar soap 1Kg (10pcs)','Cleaning',1250,'download-25.jpg.jpeg'],[123,'BIDCO Cream Bar Soap 800g (25 pieces)','Cleaning',2300,'download-25.jpg.jpeg'],[124,'Lato UHT Whole Milk 500ml (Box of 12 pieces)','Dairy',520,'download-38.jpg.jpeg'],[125,'Lato PureGEE 1kg (A carton of 12 pieces)','Dairy',4580,'download-38.jpg.jpeg'],[126,'Lato BUTTER 500g (A carton of 12 pieces)','Dairy',5880,'download-38.jpg.jpeg'],[127,'CHEESE 250g (Box of 12pcs)','Dairy',3600,'download-40.jpg.jpeg'],[128,'DAAWAT Spaghetti 400g (A carton of 24 Pieces)','Staples',1150,'21784_main.avif'],[129,'Bella/Hanan Tissue (Bale of 48 pieces)','Cleaning and Hygiene',1020,'download-11-1.jpg.jpeg'],[130,'Weetabix 45grams (A carton of 24 Pieces)','Staples',1370,'download-1.jpg.jpeg'],[131,'INDOMIE 70g (A Carton of 24 Pieces)','Staples',850,'greenspoon_indomie_70g-2076-100x100.jpg.jpeg'],[132,'Sunlight Washing Powder 500g (24 Pieces)','Cleaning and Hygiene',2800,'woocommerce-placeholder.webp'],[133,'Softcare Pampers (Bale of 6 Packets)','Health & Beauty',3000,'download-4.jpg.jpeg'],[134,'Kisskids (Bale of 6 Packets)','Health & Beauty',2400,'download-5.jpg.jpeg'],[135,'Molfix (Bale of 6 Packets)','Health & Beauty',2770,'download-4.jpg.jpeg'],
+[136,'Maize 90kg','Cereals',3000,'download-55.jpg.jpeg'],[137,'Makueni Ndengu 90kg','Cereals',8300,'download-52.jpg.jpeg'],[138,'Nylon Ndengu 90Kgs','Cereals',7600,'download-54.jpg.jpeg'],[139,'Kamande 50kg','Cereals',7000,'download-53.jpg.jpeg'],[140,'Livelle Toilet Tissue 10×4s','Cleaning and Hygiene',1500,'download-11-1.jpg.jpeg'],[141,'Poshy Roll Xtra Toilet Tissue Unwrapped 4×10s','Cleaning and Hygiene',1000,'download-11-1.jpg.jpeg'],[142,'Poshy Mega Tissue Jumbo Roll Wrapped 12×1s','Cleaning and Hygiene',2100,'download-11-1.jpg.jpeg'],[143,'Celine Premium Serviettes 12×100 Sheets','Cleaning and Hygiene',900,'download-11-1.jpg.jpeg'],[144,'Nuru Scouring Powder Lemon Fresh Bottle 24×500g','Cleaning and Hygiene',1200,'download-30.jpg.jpeg'],[145,'Msafi White Bar Soap 12×700g','Cleaning and Hygiene',1500,'download-25.jpg.jpeg'],[146,'Nuru Dish Washing Paste Lemon Spark 6×800g','Cleaning and Hygiene',1500,'download-31.jpg.jpeg'],[147,'Velvex Dishwashing Liquid Lemon Burst 1×5L','Cleaning and Hygiene',450,'download-30.jpg.jpeg'],[148,'Sunlight Hand Washing Powder Eden Yellow 6×1kg','Cleaning and Hygiene',2000,'woocommerce-placeholder.webp'],[149,'Vim POWDER Lemon Fresh 6×1kg','Cleaning and Hygiene',1000,'woocommerce-placeholder.webp'],[150,'Jik Bleach Regular 4×1.5L','Cleaning and Hygiene',2860,'download-30.jpg.jpeg'],[151,'Jik Bleach Colours 4×1.5L','Cleaning and Hygiene',4300,'download-30.jpg.jpeg'],[152,'Nuru Dish Washing Liquid Lemon Spark 4×5L','Cleaning and Hygiene',2350,'download-31.jpg.jpeg'],
+[153,'Makueni Ndengu — Price per KG','Prices per KG',95,'download-52.jpg.jpeg'],[154,'Nylon Ndengu — Price per KG','Prices per KG',85,'download-54.jpg.jpeg'],[155,'Kamande — Price per KG','Prices per KG',145,'download-53.jpg.jpeg'],[156,'Maize — Price per KG','Prices per KG',30,'download-55.jpg.jpeg'],[157,'Njahi — Price per KG','Prices per KG',65,'download-52.jpg.jpeg'],[158,'Yellow Beans — Price per KG','Prices per KG',85,'download-52.jpg.jpeg'],[159,'Wairimu Beans — Price per KG','Prices per KG',65,'download-52.jpg.jpeg'],[160,'Nyayo Beans — Price per KG','Prices per KG',65,'download-52.jpg.jpeg'],[161,'Rosecoco — Price per KG','Prices per KG',70,'download-52.jpg.jpeg'],[162,'Pigeon Peas/Bhaazi — Price per KG','Prices per KG',75,'download-52.jpg.jpeg']
 ];
-
-/* Replace the old Viman catalogue with the SAMWEST catalogue. */
-products.length = 0;
-samwestProducts.forEach(product => products.push(product));
-localStorage.removeItem('vimanCart');
-cart.length = 0;
-if (typeof renderCategories === 'function') renderCategories();
-if (typeof renderProducts === 'function') renderProducts();
-if (typeof renderCart === 'function') renderCart();
+const samwestBase='https://vimandistributors.store/images/';
+products.length=0;samwestProducts.forEach(p=>products.push({id:p[0],name:p[1],cat:p[2],price:p[3],img:samwestBase+p[4]}));
+category='All';
+if(typeof saveCart==='function')saveCart();
+if(typeof renderCategories==='function')renderCategories();
+if(typeof renderProducts==='function')renderProducts();
+if(typeof renderCart==='function')renderCart();
